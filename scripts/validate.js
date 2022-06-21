@@ -8,26 +8,20 @@ const regularValidate = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(
 mailSubmitButton.addEventListener('click',submitButton)
 inputValidate.addEventListener('keydown',getInputValue)
 
+function submitButton({getValue}){
+  if(!regularValidate.test(getValue)){
+    validateErrorText.style.display = "block";
+  }if(regularValidate.test(getValue) || getValue.length == 0 ){
+    validateErrorText.style.display = "";
+  }
+}
+
 
 function getInputValue(e){
  const getData = e.target.value;
   const getValue = getData;
   submitButton({getValue})
-  console.log("burası" + typeof getValue)
 }
-
-
-
-function submitButton({getValue}){
-  if(!regularValidate.test(getValue)){
-    validateErrorText.style.display = "block";
-  }if(regularValidate.test(getValue)){
-    validateErrorText.style.display = "";
-  }if(getValue.length == 0){
-    validateErrorText.style.display = "";
-  }
-}
-
 
 
 

@@ -1,4 +1,4 @@
-# Frontend Mentor - Loopstudios landing page solution
+# Frontend Mentor - Fylo Dark Theme landing page solution
 
 ## Table of contents
 
